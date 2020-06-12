@@ -1,0 +1,74 @@
+/* pages/invition/invition.wxss */
+
+.box {
+  width: 100vw;
+  position: relative;
+  height: 100%;
+  /* background: red; */
+}
+
+.yuyue {
+  width: 88%;
+  position: fixed;
+  left: 50%;
+  bottom: 3%;
+  transform: translate(-50%, 0%);
+  border-radius: 44px;
+  background-color: #038dff;
+  box-shadow: 0 4px 10px 0 rgba(40, 146, 255, 0.30);
+  height: 6.6vh;
+  font-size: 30rpx;
+  z-index: 500;
+}
+
+.button {
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+}
+.cuIcon-close {
+  color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.select_box {
+    background-color: #eee;
+    padding: 0 10rpx;
+    width: 93%;
+    position: absolute;
+    top: 110rpx;
+    z-index: 100;
+    overflow: hidden;
+    animation: myfirst 0.5s;
+}
+
+.select_Wrap {
+    background-color: #eee;
+    padding: 0 10rpx;
+    width: 93%;
+    position: absolute;
+    top: 110rpx;
+    z-index: 100;
+    overflow: hidden;
+    /* animation: myfirst 0.5s; */
+}
+ 
+@keyframes myfirst {
+    from {
+        height: 0rpx;
+    }
+ 
+    to {
+        height: 210rpx;
+    }
+}
+
+.cu-form-group {
+  position: relative;
+}
+
+.select_one:hover {
+  background: #ffffff;
+}

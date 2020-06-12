@@ -1,0 +1,7 @@
+@import "style/icon.wxss";
+@import "style/main.wxss";
+@import "style/index.wxss";
+.body{
+  width: 100vw;
+  height: 100vh;
+}

@@ -1,0 +1,51 @@
+<view>
+  <view class="cu-bar search bg-white">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="搜索" confirm-type="search" bindinput='searchInput' value="{{searchCondition}}"></input>
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-green shadow-blur round" bindtap="seachList">搜索</button>
+    </view>
+  </view>
+  <!-- <info-panel status="1" data="{{panelData}}" bindtap="goInviteDetail" class="conWrap"></info-panel> -->
+  <view class='body'>
+    <view class='listWrap' wx:for="{{panelData}}" wx:for-item="item" wx:for-index="i" wx:key="{{i}}" bindtap="goInviteDetail" data-index="{{i}}">
+      <view class='title'>
+        <view class='name'>{{item.visitorName}}</view>
+        <!-- <view class='number'>4/15</view> -->
+      </view>
+      <view class='listCell'>
+        <image src='../../images/phone.png' class='icon'></image>
+        <view class='con'>邀请人电话：</view>
+        <view>{{item.phoneNo}}</view>
+      </view>
+      <view class='listCell'>
+        <image src='../../images/yuyuereson.png' class='icon'></image>
+        <view class='con'>邀请原因：</view>
+        <view>{{item.reason}}</view>
+      </view>
+      <view class='listCell'>
+        <image src='../../images/homeaddress.png' class='icon'></image>
+        <view class='con'>访问地址：</view>
+        <view>{{item.address}}</view>
+      </view>
+      <view class='listCell'>
+        <image src='../../images/arrivetime.png' class='icon'></image>
+        <view class='con'>到访时间：</view>
+        <view>{{item.estimatedDatetimeArrive}}</view>
+      </view>
+      <view class='listCell'>
+        <image src='../../images/leavetime.png' class='icon'></image>
+        <view class='con'>离开时间：</view>
+        <view>{{item.estimatedDatetimeLeave}}</view>
+      </view>
+    </view>
+
+    <view style='height:100px;'> </view>
+  </view>
+
+  <button bindtap='goAdd' class="yuyue bg-blue">
+    邀请访客
+  </button>
+</view>

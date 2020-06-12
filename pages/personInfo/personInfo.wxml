@@ -1,0 +1,33 @@
+<form>
+  <view class="cu-form-group margin-top padding-top padding-bottom">
+    <view class="title">我的人脸照：</view>
+    <!-- 取消选择修改头像的功能 -->
+    <!-- bindtap='selectLocalPhoto' -->
+    <image class="info" style="width: 60px; height: 60px; " src="{{src}}"></image>
+    <!-- <view class='arrow'></view> -->
+  </view>
+  <view class="cu-form-group" bindtap='changeName'>
+    <view class="title name">昵称：</view>
+    <input value="{{username}}" disabled placeholder='请输入你的名字' bindinput="nameChnage" />
+    <view class='arrow'></view>
+  </view>
+  <view class="cu-form-group " bindtap='changePhone'>
+    <view class="title">手机号码：</view>
+    <input value="{{userPhone}}" disabled placeholder='请输入你的手机号码' bindinput="phoneChange" />
+    <!-- <view class="info">{{userPhone}}</view> -->
+    <view class='arrow'></view>
+  </view>
+  <view class="cu-form-group " bindtap='reauthentication'>
+    <view class="title">身份证号码</view>
+    <view class="info" wx:if="{{verifyState=='identity_unverified'}}">未验证</view>
+    <view class="info" wx:elif="{{verifyState=='identity_in'}}">验证中</view>
+    <view class="info" wx:elif="{{verifyState=='identity_verified'}}">已验证</view>
+    <view class="info" wx:elif="{{verifyState=='identity_fail'}}">验证失败</view>
+    <view class='arrow'></view>
+  </view>
+  <view class="cu-form-group " wx:if="{{verifyState=='identity_fail'}}">
+    <view class="title">失败原因</view>
+    <view class="info">{{reson}}</view>
+  </view>
+  <!-- <button class='saveBtn' bindtap='save' loading='{{loading}}'>保存</button> -->
+</form>

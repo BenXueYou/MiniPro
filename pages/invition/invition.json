@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "info-panel": "/components/panel/panel"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "邀请访客"
+}

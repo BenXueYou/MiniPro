@@ -1,0 +1,93 @@
+<form class='body'>
+  <view class="cu-form-group">
+    <view class="title">访客名字</view>
+    <input placeholder="输入姓名" bindinput='addNameInput'></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">访客电话</view>
+    <input placeholder="输入电话" bindinput='addPhoneInput'></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">邀请原因</view>
+    <input placeholder="输入原因" bindinput='addReasonInput'></input>
+  </view>
+  <view class="cu-form-group" bindtap='bindShowAdress'>
+    <view class="title">访问地址</view>
+    <picker bindchange="bindPickerAdress" value="{{index}}" range-key="{{'adress'}}" range="{{adressArr}}">
+      <view class="picker">
+        {{adressArr[index].adress}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group" bindtap='bindShowMsg'>
+    <view class="title">开门凭证</view>
+    <picker bindchange="bindPickerChange" value="{{isAnnual}}" range-key="{{'key'}}" range="{{medium}}">
+      <view class="picker">
+        {{medium[isAnnual].key}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group padding-top padding-bottom" wx:if="{{isAnnual==1}}">
+    <view class="title">访客照片：</view>
+    <image bindtap='selectLocalPhoto' class="info" style="width: 60px; height: 60px; " src="{{src}}"></image>
+    <!-- <view class='arrow'></view> -->
+  </view>
+  <view class="cu-form-group">
+    <view class="title">到访日期选择</view>
+    <picker mode="date" value="{{date1}}" bindchange="DateChange1">
+      <view class="picker">
+        {{date1}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">到访时间选择</view>
+    <picker mode="time" value="{{time1}}" bindchange="TimeChange1">
+      <view class="picker">
+        {{time1}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">离开日期选择</view>
+    <picker mode="date" value="{{date2}}" bindchange="DateChange2">
+      <view class="picker">
+        {{date2}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">离开时间选择</view>
+    <picker mode="time" value="{{time2}}" bindchange="TimeChange2">
+      <view class="picker">
+        {{time2}}
+      </view>
+    </picker>
+  </view>
+  <view style="height:100px;">
+  </view>
+  <button bindtap='goAdd' class="yuyue bg-blue" disabled='{{isRequest}}'>
+    邀请访客
+  </button>
+</form>
+<view class="cu-modal {{modalName=='Image'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog" catchtap>
+    <view class="bg-img" style="backgroud-size:100px 100px;margin:15px;height:200px;">
+      <view class="cu-bar justify-center text-white">
+        <canvas style="width: 200px; height: 200px;" canvas-id="myQrcode"></canvas>
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+    </view>
+    <view>邀请对方</view>
+    <view>分享二维码邀请对方方便开门</view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left aadaz">
+        <button class='button' type='primary' open-type="share">立即分享</button>
+      </view>
+    </view>
+  </view>
+</view>

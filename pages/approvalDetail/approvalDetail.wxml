@@ -1,0 +1,110 @@
+<view class='body'>
+  <view class='body-header'>
+    <view class='yuyue'>
+      <image class='passIcon' src="../../images/passed.png"></image>
+      <view class="yuyuetext">
+        预约申请
+      </view>
+    </view>
+    <image class='top-images' src='../../images/appoint_bg.png'></image>
+    <view class='status1' wx:if="{{userObj.approveState=='unchecked'}}">
+      待人证核验
+    </view>
+    <view class='status1' wx:if="{{userObj.approveState=='unexamine'}}">
+      未审批
+    </view>
+    <view class='status2' wx:if="{{userObj.approveState=='approve'}}">
+      审批通过
+    </view>
+    <view class='status3' wx:if="{{userObj.approveState=='rejected'}}">
+      已拒绝
+    </view>
+    <view class='status3' wx:if="{{userObj.approveState=='cancled'}}">
+      已取消
+    </view>
+  </view>
+  <view class='body-main1'>
+    <view class="cu-form-group myhead">
+      <image class="info head-images" mode="widthFix" src="{{src}}"></image>
+      <view class="personInfo">
+        <view class="personName">拜访人：{{userObj.visitorName}}</view>
+        <view class="personPhone">电话：{{userObj.staffPhoneNo}}</view>
+      </view>
+      <view class='arrow'></view>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">预约原因</view>
+      <view>{{userObj.reason}}</view>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">到访时间</view>
+      <view>{{userObj.estimatedDatetimeArrive}}</view>
+    </view>
+    <!-- <view class="cu-form-group">
+      <view class="title">离开时间</view>
+      <view>{{userObj.estimatedDatetimeLeave}}</view>
+    </view> -->
+    <view class="cu-form-group">
+      <view class="title">离开日期选择</view>
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChange">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="cu-form-group">
+      <view class="title">离开时间选择</view>
+      <picker mode="time" value="{{time}}" start="00:01" end="23:59" bindchange="TimeChange">
+        <view class="picker ">
+          {{time}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='body-main2'>
+    <view class="cu-form-group" bindtap="showPicker_01">
+      <view class="title">访问地址</view>
+      <!-- <picker bindchange="bindPickerChange" value="{{addresIndex}}" range="{{addressArr}}" wx:if="{{userObj.approveState=='unexamine'}}">
+        <view style='text-align:right;'>
+          {{addressArr[addresIndex]}}
+        </view>
+      </picker> -->
+
+      <v-picker isShowPicker="{{isShow_01}}" titleText='选择地址' bindsure="sureCallBack_01" bindcancle="cancleCallBack_01" scrollType="normal" listData="{{addressArr}}" indicatorStyle="height:47px"></v-picker>
+      
+      <view class='picker' style='width:60%;' >{{picker_01_data||userObj.address}}</view>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">开门凭证</view>
+      <picker bindchange="bindPickerChange2" value="{{credentialsIndex}}" range="{{credentArr}}">
+        <view class="picker">
+          {{credentArr[credentialsIndex]}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='body-main3'>
+    <view class="cu-form-group">
+      <view class="title">审批流程</view>
+    </view>
+    <view class="cu-form-group">
+      <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox" wx:if="{{userObj.approveState=='unexamine'}}">
+          <checkbox value="{{item.name}}" checked="true" disabled="disabled" /> {{userObj.staffName}} 审核中
+        </label>
+        <label class="checkbox" wx:else="{{userObj.approveState=='unexamine'}}">
+          <checkbox value="{{item.name}}" checked="true" disabled="disabled" /> {{userObj.staffName}} 已审核
+        </label>
+      </checkbox-group>
+    </view>
+  </view>
+  <view class='bottomBtnBox' wx:if="{{userObj.approveState=='unexamine'}}">
+    <button bindtap='agreeApproval' data-op='1' class="yuyue1 bg-blue">
+      同意
+    </button>
+    <button bindtap='agreeApproval' data-op='0' class="yuyue2 bg-white">
+      拒绝
+    </button>
+  </view>
+</view>

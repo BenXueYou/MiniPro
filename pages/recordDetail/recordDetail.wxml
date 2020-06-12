@@ -1,0 +1,117 @@
+<view class='body'>
+  <view class='body-header'>
+    <view class='yuyue'>
+      <image class='passIcon' src="../../images/passed.png"></image>
+      <view class="yuyuetext">
+        预约申请
+      </view>
+    </view>
+    <image class='top-images' src='../../images/appoint_bg.png'></image>
+    <view class='status1' wx:if="{{userObj.approveState=='unchecked'}}">
+      待人证核验
+    </view>
+    <view class='status1' wx:if="{{userObj.approveState=='unexamine'}}">
+      未审批
+    </view>
+    <view class='status2' wx:if="{{userObj.approveState=='approve'}}">
+      审批通过
+    </view>
+    <view class='status3' wx:if="{{userObj.approveState=='rejected'}}">
+      已拒绝
+    </view>
+    <view class='status3' wx:if="{{userObj.approveState=='cancled'}}">
+      已取消
+    </view>
+  </view>
+  <view class='body-main2'>
+    <view class="cu-form-group">
+      <view class="title">被访人</view>
+      <view>{{userObj.staffName || ""}}</view>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">被访人电话</view>
+      <view>{{userObj.staffPhoneNo}}</view>
+    </view>
+  </view>
+  <view class='body-main1'>
+    <view class="cu-form-group myhead" bindtap='certifyAct'>
+      <image bindtap='selectLocalPhoto' class="info head-images" src="{{src}}"></image>
+      <view class="personInfo">
+        <view class="personName">拜访人：{{name}}</view>
+        <view class="personPhone">电话：{{phone}}</view>
+      </view>
+      <view class='arrow'></view>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">车牌（选填）</view>
+      <view>{{userObj.plateNo}}</view>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">预约原因</view>
+      <view>{{userObj.reason}}</view>
+    </view>
+    <view class="cu-form-group" style="border-bottom:0px;">
+      <view class="title">访问地址</view>
+      <view>{{userObj.address}}</view>
+    </view>
+    <view class="cu-form-group" style='text-align:right;'>
+      <view class="title"></view>
+      <view class='daohang' bindtap='navigation'>
+        <image class='fangwen' src="../../images/daohang.png"></image>
+        导航
+      </view>
+      <view class='daohang'>
+        <image class='fangwen' src="../../images/pingmian.png"></image>
+        平面图
+      </view>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">到访时间</view>
+      <view>{{userObj.estimatedDatetimeArrive}}</view>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">离开时间</view>
+      <view>{{userObj.estimatedDatetimeLeave}}</view>
+    </view>
+  </view>
+  <view class='bottomBtnBox'>
+    <button bindtap='renzheng' class="yuyue1 bg-blue" wx:if="{{userObj.approveState=='unchecked'}}">
+      人证核验
+    </button>
+    <button bindtap='cancelRecord' class="yuyue1 bg-blue" wx:if="{{userObj.approveState!='rejected' || userObj.approveState!='cancled'}}">
+      取消申请
+    </button>
+    <button bindtap='showQrCodeAct' class="yuyue1 bg-blue" wx:if="{{userObj.approveState=='approve' && userObj.mediumTypes[0]=='qrcode'}}">
+      二维码
+    </button>
+    <button bindtap='repeatRecord' class="yuyue1 bg-blue" wx:if="{{userObj.approveState=='rejected'}}">
+      重复预约
+    </button>
+    <button bindtap='operator' class="yuyue1 bg-blue" wx:if="{{userObj.approveState!='unexamine'}}">
+      操作说明
+    </button>
+    <!-- <button bindtap='cancelAppoint' class="yuyue2 bg-white">
+      拒绝
+    </button> -->
+  </view>
+  <view class="cu-modal {{modalName=='Image'?'show':''}}" bindtap="hideModal">
+    <view class="cu-dialog" catchtap>
+      <view class="bg-img ustify-center align-center">
+        <view bindtap='imageExpand' class="mycanvs cu-bar justify-center align-center text-white canvasBox">
+          <!-- class="mycanvs  {{!expImage?'hideBox':'showExpBox'}}" -->
+          <canvas canvas-id="myQrcode"></canvas>
+          <!-- <view class='qrCodeImageBox'>
+            <image src='{{qrCodeSrc}}'></image>
+          </view> -->
+        </view>
+        <text class="cuIcon-close action" style="color:#000;font-size:20px;" bindtap="hideModal"></text>
+      </view>
+      <view class='tipsText' bindtap="hideModal">使用二维码快速开门</view>
+    </view>
+  </view>
+  <!-- <view class="expImageBox {{!expImage?'hideBox':'showExpBox'}}" bindtap='hideBoxAct'>
+    <view class='qrCodeImageBox'>
+      <image src='{{qrCodeSrc}}'></image>
+    </view>
+  </view> -->
+</view>

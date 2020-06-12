@@ -1,0 +1,32 @@
+<view class='body'>
+  <view class='body-header'>
+    <image class='top-images' src='../../images/appoint_bg.png'></image>
+    <image class='status-images' src='../../images/submit_icon.png'></image>
+    <view class='status status1'>
+      访问信息已提交
+    </view>
+    <view class='status status2'> 请等待或催办被访人</view>
+  </view>
+  <view class='body-main'>
+    <view class="cu-form-group">
+      <view class="title">被访人</view>
+      <view class="title">{{userObj.respondentName}}</view>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">被访人电话</view>
+      <view class="title">{{userObj.respondentPhone}}</view>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">预约原因</view>
+      <view class="title">{{userObj.reason}}</view>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">到访时间</view>
+      <view class="title">{{userObj.date+' '+userObj.time}}</view>
+    </view>
+  </view>
+  <button bindtap='cancelAppoint' class="yuyue bg-blue">
+    <!-- 取消提交 -->
+    返回首页
+  </button>
+</view>

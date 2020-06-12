@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "info-panel": "/components/panel/panel"
+  },
+  "navigationBarTitleText": "邀请访客"
+}

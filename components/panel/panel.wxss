@@ -1,0 +1,89 @@
+.panel {
+  width: calc(680rpx);
+  margin: 10px auto;
+  background-color: #fff;
+  padding: 28rpx 35rpx;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 4px 20px 0 rgba(48, 54, 85, 0.15);
+  border-radius: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.header .name {
+  font-size: 32rpx;
+  color: #303655;
+  font-weight: bold;
+}
+
+.header .name .status {
+  display: inline-block;
+  margin-left: 30px;
+  font-size: 12px;
+  padding: 10rpx 30rpx;
+  border-radius: 25px;
+  font-family: "PingFangSC-Regular";
+}
+
+.success {
+  color: #25d298;
+  background: rgba(37, 210, 152, 0.15);
+}
+
+.pedding {
+  color: #eaaf17;
+  background-color: rgba(234, 175, 23, 0.15);
+}
+
+.refuse {
+  color: #ff9998;
+  background-color: rgba(255, 153, 152, 0.15);
+}
+
+.header .date {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.panelItem {
+  display: flex;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.panelItem .title {
+  width: 7em;
+  font-size: 26rpx;
+  color: #303655;
+}
+
+.panelItem .icon {
+  width:26rpx;
+  /* height: 18rpx; */
+  /* width: 18rpx; */
+  margin:0px 5px;
+}
+
+.panelItem .zhijie {
+  font-size: 26rpx;
+  color: #848498;
+  width:calc(100% - 7em);
+}
+
+.panelItem .info {
+  width: calc(100% - 7em);
+  font-size: 26rpx;
+  color: #848498;
+}
+
+.whiteLine {
+  width: calc(100% + 20px);
+  height: 1px;
+  background: #e5e5e5;
+  margin: 10px 0px 10px -10px;
+}

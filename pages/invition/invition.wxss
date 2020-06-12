@@ -1,0 +1,79 @@
+/* pages/invition/invition.wxss */
+
+.box {
+  width: 100vw;
+  position: relative;
+  height: 100%;
+  /* background: red; */
+}
+
+.body {
+  padding: 0 35rpx;
+}
+.yuyue {
+  width: 88%;
+  position: fixed;
+  left: 50%;
+  bottom: 3%;
+  transform: translate(-50%, 0%);
+  border-radius: 44px;
+  background-color: #038dff;
+  box-shadow: 0 4px 10px 0 rgba(40, 146, 255, 0.30);
+  height: 6.6vh;
+  line-height: 6.6vh;
+  font-size: 30rpx;
+  z-index: 500;
+}
+
+.listWrap {
+  width: 100%;
+  height: 200px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 20px 0 rgba(48,54,85,0.10);
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.listWrap .title {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid  #E5E5E5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 37rpx 0 35rpx;
+  margin-bottom: 13px;
+}
+
+.listWrap .title .name {
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  color: #303655;
+}
+
+.listWrap .title .number {
+ font-family: PingFangSC-Regular;
+  font-size: 13px;
+  color: #999999;
+}
+
+.listCell {
+  width: 100%;
+  height: 26px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 41.7rpx;
+  /* margin-top: 13px; */
+}
+
+.listCell .icon {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 15rpx;
+}
+
+.listCell .con {
+  width: 180rpx;
+}

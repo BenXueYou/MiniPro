@@ -1,0 +1,28 @@
+<view class='registerClass'>
+  <image class='imagesClass' src='../../images/logo.png' mode='scaleToFill'></image>
+  <form class="fromClass">
+    <view class="form-group-cell cu-form-group margin-top">
+      <image class='telephone_icon' src='../../images/telephone_icon.png'></image>
+      <input placeholder="输入您的手机号" bindinput="phoneInput"></input>
+    </view>
+
+    <view class="form-group-cell cu-form-group">
+      <image class='telephone_icon' src='../../images/code_icon.png'></image>
+      <input placeholder="输入验证码" bindinput='codeInput'></input>
+      <view class="cu-capsule radius code-tips-box">
+        <view bindtap='getCode' class="cu-tag code-tips">
+          {{time}}
+        </view>
+      </view>
+    </view>
+  </form>
+  <button class="bg-blue margin-tb-sm lg submitBtn" bindtap='register'>下一步</button>
+  <view class='loginTapView'>已有账号， 立即 <text bindtap='toLoginAct' style='color:#038dff'>验证登录</text></view>
+  <view class='bottom-tips'>
+    <checkbox-group class='checked-group-class' bindchange='checkedChange'>
+      <checkbox checked value='true' class='check-box-class'></checkbox>
+    </checkbox-group>
+    <label class='tips-txt'>我已经阅读并同意</label>
+    <label class='tips-item-txt'>《广拓用户协议》</label>
+  </view>
+</view>

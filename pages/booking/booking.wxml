@@ -1,0 +1,16 @@
+<view class='body'>
+  <view class='body-header'>
+    <image class='top-images' src='../../images/appoint_bg.png'></image>
+  </view>
+  <view class='body-main'>
+    <view class='cell-class' wx:for='{{mainArr}}' wx:key='{{index}}'>
+      <label class='cell-label'>广拓是新一代物业智能管理物业系 提供了一套集微信公众号
+      </label>
+      <image class='cell-image' src='../../images/logo2.png'></image>
+    </view>
+  </view>
+  <button bindtap='gozhuce'  class="yuyue bg-blue">
+   <text class="cuIcon-roundadd lg text-white"></text>
+    发起预约
+  </button>
+</view>

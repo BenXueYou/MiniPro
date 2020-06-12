@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "v-picker": "/components/picker/picker"
+  },
+  "navigationBarTitleText": "我的审批"
+}

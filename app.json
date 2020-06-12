@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/register/register",
+    "pages/setPassWord/setPassWord",
+    "pages/share/share",
+    "pages/peron/peron",
+    "pages/rename/rename",
+    "pages/booking/booking",
+    "pages/records/records",
+    "pages/recordDetail/recordDetail",
+    "pages/approvalDetail/approvalDetail",
+    "pages/login/login",
+    "pages/approval/approval",
+    "pages/personInfo/personInfo",
+    "pages/bookingForm/bookingForm",
+    "pages/inviteDetail/inviteDetail",
+    "pages/invition/invition",
+    "pages/invititeAdd/invititeAdd",
+    "pages/appointSuccess/appointSuccess",
+    "pages/certify/certify"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "广拓社区小程序",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#666666"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "请点击确定"
+    }
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#848498",
+    "selectedColor": "#018DFF",
+    "list": [
+      {
+        "pagePath": "pages/booking/booking",
+        "text": "发起预约",
+        "iconPath": "images/appoint_icon.png",
+        "selectedIconPath": "images/appoint_icon_select.png"
+      },
+      {
+        "pagePath": "pages/records/records",
+        "text": "预约记录",
+        "iconPath": "images/appoint_record_icon.png",
+        "selectedIconPath": "images/appoint_record_icon_select.png"
+      },
+      {
+        "pagePath": "pages/approval/approval",
+        "text": "我的审批",
+        "iconPath": "images/examine_icon.png",
+        "selectedIconPath": "images/examine_icon_select.png"
+      },
+      {
+        "pagePath": "pages/invition/invition",
+        "text": "邀请访客",
+        "iconPath": "images/visitor_icon.png",
+        "selectedIconPath": "images/visitor_icon_select.png"
+      },
+      {
+        "pagePath": "pages/peron/peron",
+        "text": "个人中心",
+        "iconPath": "images/personal_icon.png",
+        "selectedIconPath": "images/personal_icon_select.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

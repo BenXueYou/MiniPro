@@ -1,0 +1,51 @@
+<form>
+  <view class="cu-form-group margin-top ">
+    <image bindtap='selectLocalPhoto' class="info" style="width: 80px; height: 80px; " mode="widthFix" src="{{src}}"></image>
+    <view class="personInfo">
+      <view class="personName">{{visitorName}}</view>
+      <view class="personPhone">{{phoneNo}}</view>
+    </view>
+  </view>
+  <view class="cu-form-group  margin-top">
+    <view class="title">邀请原因</view>
+    <view class="info">{{reason}}</view>
+  </view>
+  <view class="cu-form-group ">
+    <view class="title">访问地址</view>
+    <view class="info">{{address}}</view>
+  </view>
+  <view class="cu-form-group ">
+    <view class="title">开门凭证</view>
+    <view class="info">{{mediumTypes}}</view>
+  </view>
+  <view class="cu-form-group ">
+    <view class="title">到访时间</view>
+    <view class="info">{{estimatedDatetimeArrive}}</view>
+  </view>
+  <view class="cu-form-group ">
+    <view class="title">离开时间</view>
+    <view class="info">{{estimatedDatetimeLeave}}</view>
+  </view>
+</form>
+
+<view class="cu-modal {{modalName=='Image'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog" catchtap>
+    <view class="bg-img" style="backgroud-size:100px 100px;margin:15px;height:200px;">
+      <view class="cu-bar justify-center text-white">
+        <canvas style="width: 200px; height: 200px;" wx:if="{{modalName=='Image'}}" canvas-id="myQrcode"></canvas>
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+    </view>
+    <view>邀请对方</view>
+    <view>分享二维码邀请对方方便开门</view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left aadaz">
+        <button class='button' type='primary' open-type="share">立即分享</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<button type='primary' class='share' bindtap='share' wx:if="{{mediumTypes=='二维码'}}">分享</button>

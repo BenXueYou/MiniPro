@@ -1,0 +1,118 @@
+view {
+  width: 100vw;
+  position: relative;
+  height: 100%;
+  /* background-color: #ffffff; */
+}
+
+.body-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.top-images {
+  width: 100%;
+  height: 20vh;
+  text-align: center;
+}
+
+.status {
+  font-family: 'PingFangSC-Regular';
+  width: 80%;
+  padding: 0px 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 25px;
+  text-align: left;
+  color: #fff;
+  font-size: 36rpx;
+}
+
+.status-images {
+  width: 8.8%;
+  height: 6vh;
+  position: absolute;
+  left: 40px;
+  top: 8.8%;
+  z-index: 99;
+}
+
+.status1 {
+  position: absolute;
+  left: 20%;
+  top: 8%;
+}
+
+.status2 {
+  position: absolute;
+  left: 20%;
+  top: 12%;
+}
+
+.status3 {
+  background: #ff9998;
+}
+
+.body-main {
+  position: absolute;
+  left: 0;
+  top: 20vh;
+  width: 100%;
+  height: 30vh;
+  background: #fff;
+}
+
+.cu-form-group {
+  border-bottom: 1px solid #e5e5e5;
+  font-family: 'PingFangSC-Regular';
+  font-size: 28rpx;
+  color: #303655;
+  letter-spacing: -0.62px;
+  width: 100%;
+  height: 7.5vh;
+  padding: 0 6.7%;
+  vertical-align: middle;
+}
+
+.cu-form-group+.cu-form-group {
+  border-top: 0rpx solid #eee;
+}
+
+.yuyue {
+  width: 88%;
+  position: absolute;
+  left: 50%;
+  bottom: 33.4%;
+  transform: translate(-50%, 0%);
+  border-radius: 44px;
+  background-color: #038dff;
+  box-shadow: 0 4px 10px 0 rgba(40, 146, 255, 0.30);
+  height: 6.6vh;
+  line-height: 6.6vh;
+  font-size: 30rpx;
+}
+
+.cell-class {
+  width: 100%;
+  height: 33%;
+  padding: 2% 6%;
+  border: 1px solid #e5e5e5;
+}
+
+.cell-label {
+  width: 70%;
+  height: 80%;
+  display: inline-block;
+  /* display: inherit; */
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.cell-image {
+  width: 25%;
+  height: 100%;
+  box-sizing: border-box;
+  vertical-align: middle;
+  margin-left: 4.9%;
+}

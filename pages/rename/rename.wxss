@@ -1,0 +1,14 @@
+.myinput {
+  background-color: #fff;
+  padding: 10px 15px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.fixd {
+  display: block;
+  width: 80px;
+  line-height: 32px;
+  height: 32px;
+  margin: 50px auto 0px;
+}

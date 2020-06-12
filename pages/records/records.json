@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "info-panel": "/components/panel/panel"
+  },
+  "navigationBarTitleText": "预约记录",
+  "enablePullDownRefresh": true
+}

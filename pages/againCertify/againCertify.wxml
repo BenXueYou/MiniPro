@@ -1,0 +1,66 @@
+<view wx:if="{{isCertify}}">
+  <view class='title'>拍摄/上传您的二代身份证</view>
+  <view class='uploadWrap'>
+    <view class='con' wx:if="{{isSnap}}">
+      <view class='upload'>
+        <image class="identityIcon" src='./../../images/identityCard.png'></image>
+        <view class='photograph' bindtap='uploadIdNumberImage'>
+          <image class="iocn" src='./../../images/photograph.png'></image>
+        </view>
+        <view class='uploadText'>点击拍摄/上传人像面</view>
+      </view>
+      <view class='box' bindtap='switchInput'>
+      </view>
+      <view class="text" bindtap='switchInput'>手动输入</view>
+    </view>
+    <view class='inputWrap' wx:if="{{!isSnap}}">
+      <view class="form-group-cell cu-form-group margin-top">
+        <input placeholder="输入姓名" bindinput="nameInput" value="{{nameVal}}"></input>
+      </view>
+      <view class="form-group-cell cu-form-group">
+        <input placeholder="输入身份证号" bindinput="idNumberInput" value="{{idNumberVal}}"></input>
+      </view>
+      <view class="form-group-cell cu-form-group">
+        <input placeholder="输入地址" bindinput="addressInput" value="{{addressVal}}"></input>
+      </view>
+      <view class='box' bindtap='switchSnap'>
+      </view>
+      <view class="text" bindtap='switchSnap'>切换拍摄</view>
+    </view>
+    <view class='alreadyUpload' wx:if="{{uploadIdNumber}}">
+      <view>{{nameCertify}}</view>
+      <view>{{idNumberCertify}}</view>
+      <view>{{addressCertify}}</view>
+    </view>
+    <image class="idIcon" src='{{uploadIdIcon}}' wx:if="{{uploadIdNumber}}"></image>
+  </view>
+  <view class='title'>拍摄/上传您的头像照</view>
+  <view class='uploadWrap'>
+    <view class='con'>
+      <view class='upload'>
+        <!-- <image class="identityIcon" src='./../../images/identityCard.png'></image> -->
+        <view class='photograph' bindtap='uploadHeaderImage'>
+          <image class="iocn" src='./../../images/photograph.png'></image>
+        </view>
+        <view class='uploadText'>点击拍摄/上传人像面</view>
+      </view>
+    </view>
+    <image class="idIcon" src='{{uploadHeaderIcon}}' wx:if="{{uploadPortrait}}"></image>
+  </view>
+  <button class='saveBtn' bindtap='saveConfirm' loading='{{loading}}'>提交</button>
+</view>
+<view wx:if="{{!isCertify}}" class='box'>
+  <view class='lineWrap btmLine'>
+    <view class='title'>我的人脸照</view>
+    <image src="{{faceSrc}}" style="width: 30px; height: 30px; "></image>
+  </view>
+  <view class='lineWrap btmLine'>
+    <view class='title'>姓名</view>
+    <view>{{nameCom}}</view>
+  </view>
+   <view class='lineWrap'>
+    <view class='title'>身份证号码</view>
+    <view>{{idNumberCom}}</view>
+  </view>
+  <button class='commitBtn' bindtap='saveCommit' loading='{{loading}}'>提交</button>
+</view>

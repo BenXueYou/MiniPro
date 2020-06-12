@@ -1,0 +1,19 @@
+<view class="box">
+
+  <view class="cu-bar search bg-white">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input value="{{searchText}}" type="text" placeholder="搜索" confirm-type="search" bindinput="searchTextChange" bindblur="startSearch"></input>
+      <text class='cuIcon-roundclosefill text-gray closeBtn' bindtap='clearText'></text>
+    </view>
+    <!-- <view class="action">
+      <button class="cu-btn bg-green shadow-blur round">搜索</button>
+    </view> -->
+  </view>
+
+  <info-panel wx:for="{{panelData}}" status="{{item.status}}" bindtap="goDetail" data-index="{{index}}" name="{{item.name}}" data="{{item.data}}" wx:key="{{item.recordUuid}}"></info-panel>
+
+  <view wx:if="{{noData&&panelData.length}}" style='line-height:30px;color:#000;text-align:center;'>
+    没有更多数据了！
+  </view>
+</view>

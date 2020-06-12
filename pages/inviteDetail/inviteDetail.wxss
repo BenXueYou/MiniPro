@@ -1,0 +1,37 @@
+.info {
+  padding-right: 40rpx;
+  color: #666;
+}
+
+.cu-form-group {
+  position: relative;
+}
+
+.personInfo {
+  width: calc(100% - 70px);
+  line-height: 20px;
+}
+
+.share {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: calc(100% - 20px);
+}
+
+.aadaz {
+  width: 100px;
+}
+
+.button {
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.cuIcon-close {
+  color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

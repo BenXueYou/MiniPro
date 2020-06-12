@@ -1,0 +1,13 @@
+page {
+  background: #fff;
+}
+
+canvas {
+  margin: 30px auto;
+  width: 94vw;
+  height: 94vw;
+}
+
+.tips {
+  text-align: center;
+}

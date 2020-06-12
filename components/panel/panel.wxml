@@ -1,0 +1,23 @@
+<view class="panel ">
+  <view class="header">
+    <view class="name">
+      {{name}}
+      <view class="status success" wx:if="{{status=='approve'}}">已通过</view>
+      <view class="status refuse" wx:elif="{{status=='rejected'}}">已拒绝</view>
+      <view class="status refuse" wx:elif="{{status=='cancled'}}">已取消</view>
+      <view class="status pedding" wx:elif="{{status=='unchecked'}}">待人证核验</view>
+      <view class="status pedding" wx:elif="{{status=='unexamine'}}">未审批</view>
+      <view class="status pedding" wx:elif="{{status=='finished'}}">已结束</view>
+      <view class="status pedding" wx:elif="{{status=='outdate'}}">已过期</view>
+    </view>
+    <!-- <view class='date'>4/15</view> -->
+  </view>
+  <view class='whiteLine'></view>
+  <view class='panelItem' wx:for="{{data}}" wx:if="{{item.value }}" wx:for-item="item" wx:for-index="i" wx:key="{{i}}">
+
+    <image class='icon' src="{{item.src}}" mode="widthFix"></image>
+    <view class="title">{{item.title}}</view>
+    <view class="zhijie">{{item.value}}</view>
+  </view>
+  <view class="arrow"></view>
+</view>

@@ -1,0 +1,24 @@
+<image class="header" src="../../images/appoint_bg.png">
+  <image class=" cu-avatar round lg" src="{{headurl}}">
+  </image>
+  <view class="info">
+    <view class="name">{{userName}}</view>
+    <view class="iphone">{{userPhone}}</view>
+  </view>
+
+  <view class="arrow" bindtap='goPersonInfo'></view>
+</image>
+
+<view class="community ">
+  <view class="title">
+    <image class='icon' src="../../images/xiaoqu.png"></image>
+    我的小区
+  </view>
+  <view class='line'></view>
+  <view class="homeAdreess" wx:for="{{homeList}}" wx:key="{{index}}">
+    <view class='a1'>{{item.areaName}}</view>
+    <view class='a2'>{{item.address}}</view>
+    <view class='a2'>家庭成员：{{item.staffNum}}人</view>
+  </view>
+
+</view>

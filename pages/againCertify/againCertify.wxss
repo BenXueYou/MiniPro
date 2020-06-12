@@ -1,0 +1,181 @@
+.title {
+  width: 100%;
+  height: 40px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #303655;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.saveBtn {
+  width: 88%;
+  position: absolute;
+  left: 50%;
+  bottom: 3%;
+  transform: translate(-50%, 0%);
+  border-radius: 44px;
+  background-color: #038dff;
+  box-shadow: 0 4px 10px 0 rgba(40, 146, 255, 0.30);
+  height: 6.6vh;
+  font-size: 30rpx;
+  z-index: 500;
+  color: #FFFFFF;
+}
+.commitBtn {
+  width: 88%;
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  transform: translate(-50%, 0%);
+  border-radius: 44px;
+  background-color: #038dff;
+  box-shadow: 0 4px 10px 0 rgba(40, 146, 255, 0.30);
+  height: 6.6vh;
+  font-size: 30rpx;
+  z-index: 500;
+  color: #FFFFFF;
+}
+.uploadWrap {
+  width: 100%;
+  height: 180px;
+  padding: 0 7.3%;
+  position: relative;
+}
+
+.uploadWrap .con {
+  width: 100%;
+  height: 180px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.uploadWrap .inputWrap {
+  width: 100%;
+  height: 180px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.upload {
+  width: 65.6%;
+  height: 135px;
+  /* background:url(./../../images/identityCard.png); */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.identityIcon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 135px;
+}
+
+.photograph {
+  width: 55px;
+  height: 55px;
+  background: #60B0FF;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+  z-index: 100;
+}
+
+.photograph .iocn {
+  width: 27px;
+  height: 25px;
+  position: relative;
+}
+
+.uploadText {
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #848498;
+  margin-top: 9px;
+}
+
+.uploadWrap .box {
+  width: 0;
+  height: 0;
+  border-top: 50px solid #60B0FF; 
+  border-left: 50px solid transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.uploadWrap .text {
+  transform: rotate(45deg);
+  font-family: PingFangSC-Regular;
+  font-size: 10px;
+  color: #FFFFFF;
+  position: absolute;
+  top: 12px;
+  right: 0;
+}
+
+.form-group-cell {
+  width: 100%;
+  height: 8.2%;
+  /* border-bottom: 1px solid #e5e5e5; */
+  text-align: center;
+}
+
+.lineWrap {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  background: #FFFFFF;
+}
+
+.btmLine {
+  border-bottom: 1rpx solid #E5E5E5;
+}
+
+.title {
+  width: auto;
+}
+
+.alreadyUpload {
+  width: 85.4%;
+  height: 180px;
+  background: rgba(51,51,51,0.6);
+  position: absolute;
+  left: 7.3%;
+  top: 0;
+  font-size: 13px;
+  line-height: 26px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 36px;
+  z-index: 20;
+}
+
+.idIcon {
+  width: 85.4%;
+  height: 180px;
+  position: absolute;
+  left: 7.3%;
+  top: 0;
+  
+}

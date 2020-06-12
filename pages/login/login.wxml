@@ -1,0 +1,32 @@
+<view class='registerClass'>
+  <view class='header'>
+    <image class='headerBg' src='../../images/logo_bg.png'></image>
+    <image class='imagesClass' src='../../images/logo.png' mode='scaleToFill'></image>
+  </view>
+  <form class="fromClass">
+    <view class="form-group-cell cu-form-group margin-top">
+      <image class='telephone_icon' src='../../images/telephone_icon.png'></image>
+      <input placeholder="输入您的手机号" bindinput="phoneInput"></input>
+    </view>
+
+    <view class="form-group-cell cu-form-group">
+      <image class='telephone_icon' src='../../images/psw_icon.png'></image>
+      <input placeholder="输入密码" password bindinput='codeInput'></input>
+      <view class="cu-capsule radius code-tips-box">
+         <image src='../../images/no_psw.png'></image>
+      </view>
+    </view>
+  </form>
+  <button class=" bg-blue margin-tb-sm lg submitBtn" bindtap='loginAct'>登录</button>
+  <view class='loginTapView'>
+    <text bindtap='toRegisterAct' style='color:#038dff'>立即注册</text>
+  </view>
+
+  <view class='bottom-tips'>
+    <checkbox-group class='checked-group-class' bindchange='checkedChange'>
+      <checkbox checked value='true' class='check-box-class'></checkbox>
+    </checkbox-group>
+    <label class='tips-txt'>我已经阅读并同意</label>
+    <label class='tips-item-txt'>《广拓用户协议》</label>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "info-panel": "/components/panel/panel"
+  },
+  "navigationBarTitleText": "我的审批",
+  "enablePullDownRefresh": true
+}

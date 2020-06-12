@@ -1,0 +1,72 @@
+<form class="">
+  <view class="cu-form-group margin-top">
+    <view class="title">被访人</view>
+    <input placeholder="输入姓名" bindinput='respondentNameInput' value="{{respondentName}}"></input>
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">被访人电话</view>
+    <input placeholder="输入电话" bindinput='respondentPhoneInput' value="{{respondentPhone}}"></input>
+    <!-- <view class="cu-capsule radius">
+      <view class="cu-tag bg-blue">
+        +86
+      </view>
+      <view class="cu-tag line-blue">
+        中国大陆
+      </view>
+    </view> -->
+  </view>
+  <view class="cu-form-group margin-top myhead" bindtap='certifyAct'>
+    <image bindtap='selectLocalPhoto' class="info head-images" src="{{src}}"></image>
+    <view class="personInfo">
+      <view class="personName">拜访人：{{name}}</view>
+      <view class="personPhone">电话：{{phone}}</view>
+    </view>
+    <view class='arrow'></view>
+  </view>
+  <!-- <view class="cu-form-group margin-top">
+    <view class="title">我的名字</view>
+    <input placeholder="" value="XXXX"></input>
+  </view>
+
+  <view class="cu-form-group ">
+    <view class="title ">我的手机号码</view>
+    <input placeholder="" value="138-xxxx-xxxx"></input>
+  </view> -->
+
+  <view class="cu-form-group ">
+    <view class="title ">车牌号码</view>
+    <input placeholder="选填" bindinput='licensePlateInput' value="{{licensePlate}}"></input>
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">预约原因</view>
+    <!-- <picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+      <view class="picker">
+        {{picker[index]}}
+      </view>
+    </picker> -->
+    <input placeholder="输入预约原因" bindinput='reasonInput' value="{{reason}}"></input>
+
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">日期选择</view>
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChange">
+      <view class="picker">
+        {{date}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">时间选择</view>
+    <picker mode="time" value="{{time}}" start="00:01" end="23:59" bindchange="TimeChange">
+      <view class="picker">
+        {{time}}
+      </view>
+    </picker>
+  </view>
+
+  <button disabled='{{submitBtnDisabled}}' bindtap='submitAct' class="submit submitBtn">提交</button>
+</form>
